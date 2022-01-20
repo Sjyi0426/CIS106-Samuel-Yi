@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="thesi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-20 09:49:06 AM"/>
+        <attribute name="created" value="dGhlc2k7REVTS1RPUC0zMzhPSVA5OzIwMjItMDEtMjA7MDk6NDY6MDYgQU07MjgzNA=="/>
+        <attribute name="edited" value="dGhlc2k7REVTS1RPUC0zMzhPSVA5OzIwMjItMDEtMjA7MDk6NDk6MDYgQU07MTsyOTQ1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="item" type="Real" array="False" size=""/>
+            <declare name="tax" type="Real" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <input variable="item"/>
+            <assign variable="tax" expression="item * 0.07"/>
+            <assign variable="total" expression="item + tax"/>
+            <output expression="&quot;Amount: $&quot; &amp; item" newline="True"/>
+            <output expression="&quot;Tax: $&quot; &amp; tax" newline="True"/>
+            <output expression="&quot;Total: $&quot; &amp; total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

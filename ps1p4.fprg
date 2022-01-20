@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="thesi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-20 09:45:47 AM"/>
+        <attribute name="created" value="dGhlc2k7REVTS1RPUC0zMzhPSVA5OzIwMjItMDEtMjA7MDk6NDI6MTMgQU07MjgyOA=="/>
+        <attribute name="edited" value="dGhlc2k7REVTS1RPUC0zMzhPSVA5OzIwMjItMDEtMjA7MDk6NDU6NDcgQU07MTsyOTQ2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="meal" type="Real" array="False" size=""/>
+            <declare name="tip" type="Real" array="False" size=""/>
+            <input variable="meal"/>
+            <assign variable="tip" expression="meal * 0.15"/>
+            <output expression="&quot;Tip is $&quot; &amp; tip" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

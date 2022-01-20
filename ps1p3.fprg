@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="thesi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-20 09:42:09 AM"/>
+        <attribute name="created" value="dGhlc2k7REVTS1RPUC0zMzhPSVA5OzIwMjItMDEtMjA7MDk6Mzk6MzQgQU07MjgzNw=="/>
+        <attribute name="edited" value="dGhlc2k7REVTS1RPUC0zMzhPSVA5OzIwMjItMDEtMjA7MDk6NDI6MDkgQU07MTsyOTQx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="g" type="Real" array="False" size=""/>
+            <declare name="m" type="Real" array="False" size=""/>
+            <declare name="mpg" type="Real" array="False" size=""/>
+            <input variable="g"/>
+            <input variable="m"/>
+            <assign variable="mpg" expression="m / g"/>
+            <output expression="&quot;Mile per gallon: &quot; &amp; mpg" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
