@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="thesi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-27 10:59:32 AM"/>
+        <attribute name="created" value="dGhlc2k7REVTS1RPUC0zMzhPSVA5OzIwMjItMDEtMjc7MTA6NTY6MzAgQU07MjgzMQ=="/>
+        <attribute name="edited" value="dGhlc2k7REVTS1RPUC0zMzhPSVA5OzIwMjItMDEtMjc7MTA6NTk6MzIgQU07MTsyOTQ0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="l" type="Real" array="False" size=""/>
+            <declare name="w" type="Real" array="False" size=""/>
+            <declare name="a" type="Real" array="False" size=""/>
+            <declare name="c" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter length: &quot;" newline="True"/>
+            <input variable="l"/>
+            <output expression="&quot;Enter width: &quot;" newline="True"/>
+            <input variable="w"/>
+            <assign variable="a" expression="l * w"/>
+            <assign variable="c" expression="(2 * l) + (2 * w)"/>
+            <output expression="&quot;Area: &quot; &amp; a" newline="True"/>
+            <output expression="&quot;Circumference: &quot; &amp; c" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

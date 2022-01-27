@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="thesi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-27 11:07:02 AM"/>
+        <attribute name="created" value="dGhlc2k7REVTS1RPUC0zMzhPSVA5OzIwMjItMDEtMjc7MTE6MDM6NTggQU07MjgzNA=="/>
+        <attribute name="edited" value="dGhlc2k7REVTS1RPUC0zMzhPSVA5OzIwMjItMDEtMjc7MTE6MDc6MDIgQU07MTsyOTM1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="p" type="Real" array="False" size=""/>
+            <declare name="d" type="Real" array="False" size=""/>
+            <declare name="da" type="Real" array="False" size=""/>
+            <declare name="dp" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter price: &quot;" newline="True"/>
+            <input variable="p"/>
+            <output expression="&quot;Enter discount: &quot;" newline="True"/>
+            <input variable="d"/>
+            <assign variable="da" expression="p * d"/>
+            <assign variable="dp" expression="p - da"/>
+            <output expression="&quot;Discount Amount: $&quot; &amp; da" newline="True"/>
+            <output expression="&quot;Discounted Price: $&quot; &amp; dp" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

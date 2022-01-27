@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="thesi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-27 10:52:42 AM"/>
+        <attribute name="created" value="dGhlc2k7REVTS1RPUC0zMzhPSVA5OzIwMjItMDEtMjc7MTA6NDc6MzUgQU07MjgzNg=="/>
+        <attribute name="edited" value="dGhlc2k7REVTS1RPUC0zMzhPSVA5OzIwMjItMDEtMjc7MTA6NTI6NDIgQU07MTsyOTM4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="q" type="Real" array="False" size=""/>
+            <declare name="p" type="Real" array="False" size=""/>
+            <declare name="e" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter quantity: &quot;" newline="True"/>
+            <input variable="q"/>
+            <output expression="&quot;Enter Price: &quot;" newline="True"/>
+            <input variable="p"/>
+            <assign variable="e" expression="q * p"/>
+            <output expression="&quot;The extended price is &quot; &amp; e" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
