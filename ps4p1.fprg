@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="thesi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-10 10:00:33 AM"/>
+        <attribute name="created" value="dGhlc2k7REVTS1RPUC0zMzhPSVA5OzIwMjItMDItMTA7MDk6NTA6MzEgQU07MjgyNw=="/>
+        <attribute name="edited" value="dGhlc2k7REVTS1RPUC0zMzhPSVA5OzIwMjItMDItMTA7MTA6MDA6MzMgQU07MTsyOTI0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="qty" type="Real" array="False" size=""/>
+            <declare name="price" type="Integer" array="False" size=""/>
+            <declare name="tax" type="Real" array="False" size=""/>
+            <declare name="extprice" type="Real" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter the quantity of widgets&quot;" newline="True"/>
+            <input variable="qty"/>
+            <if expression="qty &gt; 10000">
+                <then>
+                    <assign variable="price" expression="10"/>
+                </then>
+                <else>
+                    <if expression="5000 &lt;= qty and qty &lt;= 10000">
+                        <then>
+                            <assign variable="price" expression="20"/>
+                        </then>
+                        <else>
+                            <assign variable="price" expression="30"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="extprice" expression="qty * price"/>
+            <assign variable="tax" expression="extprice * 0.07"/>
+            <assign variable="total" expression="extprice + tax"/>
+            <output expression="&quot;Extended Price: $&quot; &amp; extprice" newline="True"/>
+            <output expression="&quot;Tax: $&quot; &amp; tax" newline="True"/>
+            <output expression="&quot;Total: $&quot; &amp; total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
