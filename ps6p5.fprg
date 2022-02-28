@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="thesi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-27 06:35:57 PM"/>
+        <attribute name="created" value="dGhlc2k7REVTS1RPUC0zMzhPSVA5OzIwMjItMDItMjc7MDY6Mjc6MDcgUE07Mjg1NA=="/>
+        <attribute name="edited" value="dGhlc2k7REVTS1RPUC0zMzhPSVA5OzIwMjItMDItMjc7MDY6MzU6NTcgUE07MjsyOTY3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lastname" type="String" array="False" size=""/>
+            <declare name="dcode" type="String" array="False" size=""/>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <assign variable="count" expression="0"/>
+            <declare name="credit" type="Real" array="False" size=""/>
+            <declare name="tuition" type="Real" array="False" size=""/>
+            <declare name="cost" type="Real" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <assign variable="total" expression="0"/>
+            <declare name="response" type="String" array="False" size=""/>
+            <output expression="&quot;Would you like to compute tuition? (Yes or No)&quot;" newline="True"/>
+            <input variable="response"/>
+            <while expression="response == &quot;Yes&quot;">
+                <assign variable="count" expression="count + 1"/>
+                <output expression="&quot;Enter last name:&quot;" newline="True"/>
+                <input variable="lastname"/>
+                <output expression="&quot;Enter district code: (I or O)&quot;" newline="True"/>
+                <input variable="dcode"/>
+                <if expression="dcode == &quot;I&quot;">
+                    <then>
+                        <assign variable="cost" expression="250.00"/>
+                    </then>
+                    <else>
+                        <assign variable="cost" expression="500.00"/>
+                    </else>
+                </if>
+                <output expression="&quot;Enter number of credits taken:&quot;" newline="True"/>
+                <input variable="credit"/>
+                <assign variable="tuition" expression="cost * credit"/>
+                <assign variable="total" expression="total + tuition"/>
+                <output expression="lastname" newline="True"/>
+                <output expression="&quot;Credits taken: &quot; &amp; credit" newline="True"/>
+                <output expression="&quot;Tuition: $&quot; &amp; tuition" newline="True"/>
+                <output expression="&quot;Would you like to compute tuition? (Yes or No)&quot;" newline="True"/>
+                <input variable="response"/>
+            </while>
+            <output expression="&quot;Total tuition owed: $&quot; &amp; total" newline="True"/>
+            <output expression="&quot;Number of students: &quot; &amp; count" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

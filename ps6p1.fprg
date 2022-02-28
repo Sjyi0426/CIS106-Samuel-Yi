@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="thesi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-23 02:23:40 PM"/>
+        <attribute name="created" value="dGhlc2k7REVTS1RPUC0zMzhPSVA5OzIwMjItMDItMjM7MTE6NTQ6MDEgQU07MjgyNQ=="/>
+        <attribute name="edited" value="dGhlc2k7REVTS1RPUC0zMzhPSVA5OzIwMjItMDItMjM7MDI6MjM6NDAgUE07MTE7Mjk5Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="pamount" type="Real" array="False" size=""/>
+            <declare name="intrate" type="Real" array="False" size=""/>
+            <declare name="annint" type="Real" array="False" size=""/>
+            <declare name="endbal" type="Real" array="False" size=""/>
+            <declare name="year" type="Integer" array="False" size=""/>
+            <declare name="totint" type="Real" array="False" size=""/>
+            <assign variable="totint" expression="0"/>
+            <output expression="&quot;Enter principle amount&quot;" newline="True"/>
+            <input variable="pamount"/>
+            <output expression="&quot;Enter interest rate&quot;" newline="True"/>
+            <input variable="intrate"/>
+            <for variable="year" start="1" end="5" direction="inc" step="1">
+                <assign variable="annint" expression="pamount * intrate"/>
+                <assign variable="endbal" expression="pamount + annint"/>
+                <output expression="&quot;Year: &quot; &amp; year" newline="True"/>
+                <output expression="&quot;Beginning Balance: $&quot; &amp; pamount" newline="True"/>
+                <output expression="&quot;Ending Balance: $&quot; &amp; endbal" newline="True"/>
+                <assign variable="pamount" expression="endbal"/>
+                <assign variable="totint" expression="totint + annint"/>
+            </for>
+            <output expression="&quot;Total interest earned: $&quot; &amp; totint" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
