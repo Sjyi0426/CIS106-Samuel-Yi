@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="thesi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-08 11:01:03 AM"/>
+        <attribute name="created" value="dGhlc2k7REVTS1RPUC0zMzhPSVA5OzIwMjItMDMtMDg7MDk6MzU6MTYgQU07Mjg0MQ=="/>
+        <attribute name="edited" value="dGhlc2k7REVTS1RPUC0zMzhPSVA5OzIwMjItMDMtMDg7MTE6MDE6MDMgQU07MzsyOTMz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lastname" type="String" array="False" size=""/>
+            <declare name="credit" type="Real" array="False" size=""/>
+            <declare name="dcode" type="String" array="False" size=""/>
+            <declare name="tuition" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter last name&quot;" newline="True"/>
+            <input variable="lastname"/>
+            <output expression="&quot;Enter credit hours&quot;" newline="True"/>
+            <input variable="credit"/>
+            <output expression="&quot;Enter district code (I or O)&quot;" newline="True"/>
+            <input variable="dcode"/>
+            <call expression="comptuition(credit,dcode)"/>
+            <assign variable="tuition" expression="comptuition(credit,dcode)"/>
+            <output expression="lastname" newline="True"/>
+            <output expression="&quot;Tuition owed: $&quot; &amp; tuition" newline="True"/>
+        </body>
+    </function>
+    <function name="comptuition" type="Real" variable="tuition">
+        <parameters>
+            <parameter name="credit" type="Real" array="False"/>
+            <parameter name="dcode" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="tuition" type="Real" array="False" size=""/>
+            <if expression="dcode == &quot;I&quot;">
+                <then>
+                    <assign variable="tuition" expression="credit * 250.00"/>
+                </then>
+                <else>
+                    <assign variable="tuition" expression="credit * 550.00"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
